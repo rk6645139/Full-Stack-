@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+.navbar h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    margin-top: 60px; /* Account for fixed navbar */
+}
+
+.left-menu {
+    width: 20%;
+    background: #f4f4f4;
+    padding: 10px;
+    transition: width 0.3s ease;
+}
+
+.left-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-menu li {
+    margin: 10px 0;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+}
+
+.right-panel {
+    width: 20%;
+    background: #ddd;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .left-menu,
+    .right-panel {
+        width: 25%;
+    }
+}
+
+@media (max-width: 767px) {
+    .left-menu,
+    .right-panel {
+        display: none;
+    }
+
+    main {
+        flex: 1;
+    }
+}
